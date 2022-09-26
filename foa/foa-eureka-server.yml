@@ -1,6 +1,10 @@
 server:
   port: 8500
 
+spring:
+  application:
+    name: foa-eureka-server
+
 eureka:
   instance:
     hostname: ${EUREKA_SERVER_HOST:localhost}
