@@ -1,9 +1,18 @@
 server:
   port: 8100
 
-#spring:
+spring:
  # application:
   #  name: foa-customer
+  datasource:
+    url: ${MYSQL_URL:jdbc:mysql://localhost:3306/foa-customer}
+    username: ${MYSQL_USER:root}
+    password: ${MYSQL_PWD:root123}
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: update
 
 eureka:
 #  instance:
