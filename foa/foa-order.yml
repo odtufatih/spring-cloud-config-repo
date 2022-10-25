@@ -1,0 +1,35 @@
+server:
+  port: 8300
+
+spring:
+ # application:
+  #  name: foa-order
+  datasource:
+    url: ${POSTGRESQL_URL:jdbc:postgresql://localhost:5432/foa-order}
+    username: ${POSTGRESQL_USER:postgres}
+    password: ${POSTGRESQL_PWD:admin}
+  jpa:
+    database: postgresql
+    #database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: debug
+        type:
+          descriptor:
+            sql: trace
+
+eureka:
+#  instance:
+ #   hostname: ${EUREKA_SERVER_HOST:localhost}
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVER_URL:http://localhost:8500/eureka/}
