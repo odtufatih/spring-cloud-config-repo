@@ -16,7 +16,7 @@ spring:
     show-sql: true
 
 eureka:
-#  instance:
+#_  instance:
  #   hostname: ${EUREKA_SERVER_HOST:localhost}
   client:
     serviceUrl:
