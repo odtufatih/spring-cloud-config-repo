@@ -16,8 +16,9 @@ spring:
     show-sql: true
 
 eureka:
-#_  instance:
+#  instance:
  #   hostname: ${EUREKA_SERVER_HOST:localhost}
   client:
     serviceUrl:
       defaultZone: ${EUREKA_SERVER_URL:http://localhost:8500/eureka/}
+test: test
