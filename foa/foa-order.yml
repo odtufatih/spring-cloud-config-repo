@@ -18,6 +18,17 @@ spring:
       hibernate:
         format_sql: true
 
+  cloud:
+    stream:
+      source: orderCreatedEventSupplier
+      bindings:
+        orderCreatedEventSupplier-out-0:
+          destination: ordercreated-events
+
+  rabbitmq:
+    username: foa
+    password: foa
+
 logging:
   level:
     org:
@@ -33,3 +44,5 @@ eureka:
   client:
     serviceUrl:
       defaultZone: ${EUREKA_SERVER_URL:http://localhost:8500/eureka/}
+
+
