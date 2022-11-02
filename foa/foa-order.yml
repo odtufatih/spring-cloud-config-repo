@@ -38,11 +38,6 @@ logging:
           descriptor:
             sql: trace
 
-      springframework:
-        cloud:
-          stream:
-            function: debug
-
 eureka:
 #  instance:
  #   hostname: ${EUREKA_SERVER_HOST:localhost}
