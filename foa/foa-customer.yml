@@ -23,8 +23,8 @@ spring:
     stream:
       function:
         bindings:
-          newOrderCreated-in-0: newOrderCreated
-          newOrderCreated:
+          newOrderCreated-in-0: orderCreatedEvent
+          orderCreatedEvent:
             destination: ordercreated-events
 
 
