@@ -20,12 +20,11 @@ spring:
     password: foa
 
   cloud:
-    stream:
-      function:
-        bindings:
-          newOrderCreated-in-0: orderCreatedEvent
-          orderCreatedEvent:
-            destination: ordercreated-events
+    function:
+      bindings:
+        newOrderCreated-in-0: orderCreatedEvent
+        orderCreatedEvent:
+          destination: ordercreated-events
 
 
 eureka:
