@@ -15,6 +15,15 @@ spring:
       ddl-auto: update
     show-sql: true
 
+  cloud:
+    stream:
+      function:
+        bindings:
+          newOrderCreated-in-0: newOrderCreated
+          newOrderCreated:
+            destination: ordercreated-events
+
+
 eureka:
 #  instance:
  #   hostname: ${EUREKA_SERVER_HOST:localhost}
