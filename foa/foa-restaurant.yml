@@ -21,8 +21,9 @@ spring:
   cloud:
     #without function definition the listener is not working so I had to add it
     function:
-      definition: newOrderCreated
+      definition: newOrderCreated # there is a Consumer bean named newOrderCreated(method name is newOrderCreated and returns Consumer type)
     stream:
       bindings:
         newOrderCreated-in-0:
           destination: ordercreated-events
+          group: restaurant

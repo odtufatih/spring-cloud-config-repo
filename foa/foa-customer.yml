@@ -27,7 +27,7 @@ spring:
       bindings:
         newOrderCreated-in-0:
           destination: ordercreated-events
-          group: customer
+          group: customer # in case more than one customer microservice instance is run, message should be processed only by one instance
 
 
 eureka:
