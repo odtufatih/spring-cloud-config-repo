@@ -20,6 +20,7 @@ spring:
     password: foa
 
   cloud:
+    #without function definition the listener is not working so I had to add it
     function:
       definition: newOrderCreated
     stream:
