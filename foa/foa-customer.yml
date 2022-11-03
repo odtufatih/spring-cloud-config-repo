@@ -20,6 +20,8 @@ spring:
     password: foa
 
   cloud:
+    function:
+      definition: newOrderCreated
     stream:
       bindings:
         newOrderCreated-in-0:
