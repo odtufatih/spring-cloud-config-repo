@@ -14,6 +14,10 @@ spring:
       database: food-order-app-restaurant
       uri: mongodb://localhost:27017
 
+  rabbitmq:
+    username: foa
+    password: foa
+
   cloud:
     #without function definition the listener is not working so I had to add it
     function:
