@@ -27,6 +27,7 @@ spring:
       bindings:
         newOrderCreated-in-0:
           destination: ordercreated-events
+          group: customer
 
 
 eureka:
