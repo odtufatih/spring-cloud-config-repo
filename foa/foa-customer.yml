@@ -21,8 +21,8 @@ spring:
 
   cloud:
     #without function definition the listener is not working so I had to add it
-    #function:
-     # definition: newOrderCreated
+    function:
+     definition: newOrderCreated
     stream:
       bindings:
         newOrderCreated-in-0:
